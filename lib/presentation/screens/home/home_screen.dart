@@ -1,4 +1,5 @@
 import 'package:app_widgets/config/menu/menu_items.dart';
+import 'package:app_widgets/presentation/screens/buttons/buttons_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -48,7 +49,13 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       onTap: () {
-        // TODO: Navigate to the selected screen
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const ButtonScreen(),
+        //   ),
+        // );
+
+        Navigator.of(context).pushNamed(menuItem.link);
       },
     );
   }
