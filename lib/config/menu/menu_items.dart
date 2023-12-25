@@ -28,4 +28,10 @@ const appMenuItems = [
     link: '/cards',
     icon: Icons.credit_card,
   ),
+  MenuItem(
+    title: 'Configuración',
+    subtitle: 'Configuración de la aplicación',
+    link: '/settings',
+    icon: Icons.settings,
+  ),
 ];

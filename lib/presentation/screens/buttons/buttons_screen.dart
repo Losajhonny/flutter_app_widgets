@@ -13,7 +13,16 @@ class ButtonScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Buttons Screen'),
       ),
-      body: const Placeholder(),
+      body: _ButtonsView(),
     );
   }
+}
+
+class _ButtonsView extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+  
 }
