@@ -1,3 +1,4 @@
+import 'package:app_widgets/presentation/screens/buttons/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -25,7 +26,6 @@ class ButtonScreen extends StatelessWidget {
 class _ButtonsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     final colors = Theme.of(context).colorScheme;
 
     return SizedBox(
@@ -50,7 +50,6 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.access_alarm_rounded),
               label: const Text("Elevated Button Icon"),
             ),
-
             FilledButton(
               onPressed: () {},
               child: const Text("Filled Button"),
@@ -60,7 +59,6 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.accessibility_new_rounded),
               label: const Text("Filled Button Icon"),
             ),
-
             OutlinedButton(
               onPressed: () {},
               child: const Text("Outlined Button"),
@@ -70,7 +68,6 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.terminal_rounded),
               label: const Text("Outlined Button Icon"),
             ),
-
             TextButton(
               onPressed: () {},
               child: const Text("Text Button"),
@@ -80,9 +77,22 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.text_snippet_rounded),
               label: const Text("Text Button Icon"),
             ),
-
-            // TODO: Custom button
-
+            CustomButton(
+              onPressed: () {
+                debugPrint("Custom Button");
+              },
+              text: "Custom Button",
+            ),
+            ButtonLabelDown(
+              label: "Button Label Down",
+              icon: const Icon(
+                Icons.label_important_outline_rounded,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                debugPrint("Button Label Down");
+              },
+            ),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.add),
