@@ -1,27 +1,40 @@
+import 'package:app_widgets/presentation/screens/buttons/button_nav_with_animated_icons.dart';
 import 'package:app_widgets/presentation/screens/buttons/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ButtonScreen extends StatelessWidget {
+class ButtonScreen extends StatefulWidget {
   static const String name = "button_screen";
 
   const ButtonScreen({super.key});
 
   @override
+  State<ButtonScreen> createState() => _ButtonScreenState();
+}
+
+class _ButtonScreenState extends State<ButtonScreen> {
+  
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Buttons Screen'),
-        ),
-        body: _ButtonsView(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            context.pop();
-          },
-          child: const Icon(Icons.arrow_back_ios_new_rounded),
-        ));
+      appBar: AppBar(
+        title: const Text('Buttons Screen'),
+      ),
+      body: _ButtonsView(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.pop();
+        },
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+      ),
+      bottomNavigationBar: const ButtonNavWithAnimatedIcons(),
+    );
   }
 }
+
+
 
 class _ButtonsView extends StatelessWidget {
   @override
